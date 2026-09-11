@@ -573,6 +573,39 @@
     .tag-orange { background: rgba(251, 146, 60, 0.15);  color: #FED7AA; }
     .tag-green  { background: rgba(74, 222, 128, 0.13);  color: #BBF7D0; }
 
+    .project-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      transition: all 0.25s;
+    }
+
+    .project-link-btn:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+      background: rgba(124, 58, 237, 0.08);
+    }
+
+    .project-link-btn.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
     /* ─── CONTATO ────────────────────────────────────────────────── */
     #contato {
       background: linear-gradient(180deg, transparent 0%, rgba(236, 72, 153, 0.04) 50%, transparent 100%);
@@ -736,7 +769,7 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-dot"></span>
-        Disponível para estágio · Fortaleza, CE
+        Disponível para estágio/emprego · Fortaleza, CE
       </div>
 
       <h1 class="hero-name">Isabella Anton<span class="hero-cursor"></span></h1>
@@ -758,7 +791,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Baixar CV
         </a>
-        <a href="#contato" class="btn btn-ghost">
+        <a href="mailto:isabellaanton3@gmail.com" class="btn btn-ghost">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Vamos conversar
         </a>
@@ -781,7 +814,7 @@
             Olá! Sou <strong>Isabella Anton</strong>, estudante do 4º semestre de <strong>Ciência da Computação</strong> na UNIFOR — Universidade de Fortaleza. Apaixonada por tecnologia desde cedo, escolhi a área porque acredito que o software tem o poder de transformar vidas.
           </p>
           <p>
-            Ao longo da graduação, desenvolvi uma base sólida em lógica de programação, estruturas de dados, algoritmos e banco de dados. Agora, busco um <strong>estágio em TI</strong> para conectar esse conhecimento teórico à prática do mercado, contribuir com times reais e continuar crescendo rápido.
+            Ao longo da graduação, desenvolvi uma base sólida em lógica de programação, estruturas de dados, algoritmos e banco de dados. Agora, busco um <strong>estágio ou emprego em TI</strong> para conectar esse conhecimento teórico à prática do mercado, contribuir com times reais e continuar crescendo rápido.
           </p>
           <p>
             Meus interesses giram em torno de <strong>desenvolvimento web</strong>, <strong>inteligência artificial</strong>, <strong>ciência de dados</strong> e <strong>engenharia de software</strong> — áreas que combino sempre que posso nos projetos acadêmicos.
@@ -795,11 +828,11 @@
           </div>
           <div class="stat-card">
             <div class="stat-number">3+</div>
-            <div class="stat-label">Projetos acadêmicos concluídos</div>
+            <div class="stat-label">Projetos práticos, do full-stack ao front-end com IA</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">100%</div>
-            <div class="stat-label">Dedicação para o primeiro estágio</div>
+            <div class="stat-label">Dedicação para o primeiro estágio ou emprego</div>
           </div>
         </div>
       </div>
@@ -913,19 +946,13 @@
 
       <div class="projects-grid">
 
-        <!-- Card 1 -->
+        <!-- Card 1 — ZeroDesperdicio -->
         <article class="project-card reveal">
-          <div class="project-thumb">
-            <div class="project-thumb-bg thumb-1">
-              <div class="thumb-grid"></div>
-              <span class="thumb-icon">🗂️</span>
-            </div>
-          </div>
           <div class="project-body">
-            <p class="project-meta">UNIFOR · Estruturas de Dados</p>
-            <h3 class="project-title">Aplicativo ZeroDesperdicio</h3>
+            <p class="project-meta">UNIFOR · Projeto Full-Stack</p>
+            <h3 class="project-title">ZeroDesperdicio</h3>
             <p class="project-desc">
-              Explicação
+              Aplicativo que conecta doadores e receptores de alimentos, combatendo o desperdício e facilitando a doação de comida dentro da comunidade. Construído com React no front-end e Firebase como backend (autenticação e banco de dados em tempo real).
             </p>
             <div class="project-tags">
               <span class="project-tag tag-violet">React</span>
@@ -935,48 +962,46 @@
           </div>
         </article>
 
-        <!-- Card 2 -->
+        <!-- Card 2 — Unifor Hunt -->
         <article class="project-card reveal">
-          <div class="project-thumb">
-            <div class="project-thumb-bg thumb-2">
-              <div class="thumb-grid"></div>
-              <span class="thumb-icon">📊</span>
-            </div>
-          </div>
           <div class="project-body">
-            <p class="project-meta">UNIFOR · Banco de Dados</p>
-            <h3 class="project-title">Nome Projeto 2</h3>
+            <p class="project-meta">UNIFOR · Geolocalização & Gamificação</p>
+            <h3 class="project-title">Unifor Hunt</h3>
             <p class="project-desc">
-               Explicação do projeto.
+              Projeto acadêmico da UNIFOR que usa geolocalização e mecânicas de gamificação como estratégia para incentivar a exploração do campus universitário, transformando o reconhecimento dos espaços da faculdade em uma espécie de caça ao tesouro interativa.
             </p>
             <div class="project-tags">
-              <span class="project-tag tag-orange">Python</span>
-              <span class="project-tag tag-cyan">PostgreSQL</span>
-              <span class="project-tag tag-pink">Pandas</span>
-              <span class="project-tag tag-green">Jupyter</span>
+              <span class="project-tag tag-orange">JavaScript</span>
+              <span class="project-tag tag-cyan">Geolocation API</span>
+              <span class="project-tag tag-pink">Gamificação</span>
             </div>
+            <div class="project-links">
+              <a href="unifor-hunt.vercel.app" target="_blank" rel="noopener" class="project-link-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Ver demo
+              </a>
           </div>
         </article>
 
-        <!-- Card 3 -->
+        <!-- Card 3 — RallyCourt.io -->
         <article class="project-card reveal">
-          <div class="project-thumb">
-            <div class="project-thumb-bg thumb-3">
-              <div class="thumb-grid"></div>
-              <span class="thumb-icon">🌐</span>
-            </div>
-          </div>
           <div class="project-body">
-            <p class="project-meta">UNIFOR · Desenvolvimento Web</p>
-            <h3 class="project-title">Projeto 3</h3>
+            <p class="project-meta">Projeto Pessoal · Simulação & IA</p>
+            <h3 class="project-title">RallyCourt.io</h3>
             <p class="project-desc">
-              Explicação Projeto 3
+              Simulador de tênis interativo com integração de inteligência artificial, desenvolvido do zero em HTML, CSS e JavaScript puro — do motor de física das jogadas à lógica de decisão do oponente controlado por IA.
             </p>
             <div class="project-tags">
-              <span class="project-tag tag-orange">Java</span>
-              <span class="project-tag tag-violet">JavaScript</span>
-              <span class="project-tag tag-cyan">MySQL</span>
+              <span class="project-tag tag-orange">HTML5</span>
               <span class="project-tag tag-pink">CSS3</span>
+              <span class="project-tag tag-violet">JavaScript</span>
+              <span class="project-tag tag-cyan">IA</span>
+            </div>
+            <div class="project-links">
+              <a href="https://rallyio.vercel.app/" target="_blank" rel="noopener" class="project-link-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Ver demo
+              </a>
             </div>
           </div>
         </article>
@@ -996,7 +1021,7 @@
 
       <div class="contact-inner reveal">
         <p class="contact-lead">
-          Estou ativamente buscando oportunidades de estágio em TI. Se você tem uma vaga, um projeto interessante ou só quer trocar uma ideia sobre tecnologia — minha caixa de entrada está sempre aberta.
+          Estou ativamente buscando oportunidades de estágio ou emprego em TI. Se você tem uma vaga, um projeto interessante ou só quer trocar uma ideia sobre tecnologia — minha caixa de entrada está sempre aberta.
         </p>
 
         <div class="contact-links">
@@ -1012,7 +1037,7 @@
             <span class="contact-link-arrow">→</span>
           </a>
 
-          <a href="https://github.com/isabella-anton" target="_blank" rel="noopener" class="contact-link">
+          <a href="https://github.com/isabellaanton" target="_blank" rel="noopener" class="contact-link">
             <div class="contact-link-icon icon-github">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="#E2E2F0"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             </div>
