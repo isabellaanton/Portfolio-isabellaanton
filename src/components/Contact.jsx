@@ -24,7 +24,7 @@ const CONTACT_LINKS = [
     ),
   },
   {
-    href: 'mailto:isabella.anton@edu.unifor.br',
+    href: 'mailto:isabellaanton3@gmail.com',
     iconClass: 'icon-email',
     name: 'E-mail',
     handle: 'isabellaanton3@gmail.com',
