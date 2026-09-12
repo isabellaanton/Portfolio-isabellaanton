@@ -24,7 +24,7 @@ const CONTACT_LINKS = [
     ),
   },
   {
-    href: 'mailto:isabella.anton@edu.unifor.br',
+    href: 'mailto:isabellaanton3@gmail.com',
     iconClass: 'icon-email',
     name: 'E-mail',
     handle: 'isabellaanton3@gmail.com',
@@ -42,9 +42,7 @@ export default function Contact() {
     <section id="contato" className="section-pad">
       <div className="container">
         <div className="reveal">
-          <p className="section-label">// 04 · contato</p>
           <h2 className="section-title">Vamos <span>conversar</span></h2>
-          <div className="section-divider"></div>
         </div>
 
         <div className="contact-inner reveal">
@@ -68,7 +66,6 @@ export default function Contact() {
                   <p className="contact-link-name">{link.name}</p>
                   <p className="contact-link-handle">{link.handle}</p>
                 </div>
-                <span className="contact-link-arrow">→</span>
               </a>
             ))}
           </div>

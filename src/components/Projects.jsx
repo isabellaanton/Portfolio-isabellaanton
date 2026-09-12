@@ -48,9 +48,7 @@ export default function Projects() {
     <section id="projetos" className="section-pad">
       <div className="container">
         <div className="reveal">
-          <p className="section-label">// 03 · projetos</p>
-          <h2 className="section-title">Trabalhos <span>Acadêmicos</span></h2>
-          <div className="section-divider"></div>
+          <h2 className="section-title">Trabalhos <span>acadêmicos</span></h2>
         </div>
 
         <div className="projects-grid">

@@ -9,9 +9,7 @@ export default function About() {
     <section id="sobre" className="section-pad">
       <div className="container">
         <div className="reveal">
-          <p className="section-label">// 01 · sobre mim</p>
           <h2 className="section-title">Quem sou <span>eu</span></h2>
-          <div className="section-divider"></div>
         </div>
 
         <div className="about-grid">

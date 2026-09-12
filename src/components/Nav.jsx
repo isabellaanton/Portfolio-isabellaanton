@@ -42,7 +42,6 @@ export default function Nav() {
 
   return (
     <nav ref={navRef}>
-      <a href="#hero" className="nav-logo">IA</a>
       <ul className="nav-links">
         {LINKS.map((link, i) => (
           <li key={link.href}>
