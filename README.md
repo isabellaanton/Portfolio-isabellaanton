@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio — Isabella Anton
 
 Portfólio pessoal convertido de HTML puro para um projeto React (Vite).
@@ -42,3 +43,6 @@ Os arquivos finais ficam na pasta `dist/`, prontos pra subir em qualquer serviç
 ## Editando conteúdo
 
 Os textos e dados (projetos, skills, links de contato) estão em arrays no topo de cada componente — não precisa mexer no JSX pra trocar textos, é só editar os arrays.
+=======
+# Portfolio-isabellaanton
+>>>>>>> bbcb1e22192d8eae4e6e15160c77408b48aa4ba6
