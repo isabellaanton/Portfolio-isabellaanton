@@ -7,11 +7,13 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import useScrollReveal from './hooks/useScrollReveal'
+import { SiteProvider } from './SiteContext'
 
 export default function App() {
   useScrollReveal()
 
   return (
+    <SiteProvider>
     <>
       <GlowBackground />
       <Nav />
@@ -22,5 +24,6 @@ export default function App() {
       <Contact />
       <Footer />
     </>
+    </SiteProvider>
   )
 }
