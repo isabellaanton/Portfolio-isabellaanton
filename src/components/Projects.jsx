@@ -1,3 +1,5 @@
+import { useSite } from '../SiteContext'
+
 const DemoIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -41,23 +43,30 @@ const PROJECTS = [
     ],
     link: 'https://rallyio.vercel.app/',
   },
+  {
+    meta: 'Projeto Individual · Música & Web Audio API', title: 'GridWave',
+    desc: 'Drum machine em português do Brasil, feita com JavaScript moderno e Web Audio API. Monte padrões, ajuste o mixer e grave suas ideias sem instalar dependências.',
+    tags: [{ label: 'JavaScript', className: 'tag-orange' }, { label: 'Web Audio API', className: 'tag-cyan' }, { label: 'Áudio', className: 'tag-violet' }],
+    link: 'https://github.com/isabellaanton/GridWaveé', github: true,
+  },
 ]
 
 export default function Projects() {
+  const { t } = useSite()
   return (
     <section id="projetos" className="section-pad">
       <div className="container">
         <div className="reveal">
-          <h2 className="section-title">Trabalhos <span>acadêmicos</span></h2>
+          <h2 className="section-title">{t.projectsTitle}</h2>
         </div>
 
         <div className="projects-grid">
           {PROJECTS.map((project) => (
             <article className="project-card reveal" key={project.title}>
               <div className="project-body">
-                <p className="project-meta">{project.meta}</p>
+                <p className="project-meta">{t.projectMeta[PROJECTS.indexOf(project)]}</p>
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-desc">{project.desc}</p>
+                <p className="project-desc">{t.projectDesc[PROJECTS.indexOf(project)]}</p>
                 <div className="project-tags">
                   {project.tags.map((tag) => (
                     <span className={`project-tag ${tag.className}`} key={tag.label}>
@@ -69,7 +78,7 @@ export default function Projects() {
                   <div className="project-links">
                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link-btn">
                       <DemoIcon />
-                      Ver demo
+                      {project.github ? t.code : t.demo}
                     </a>
                   </div>
                 )}

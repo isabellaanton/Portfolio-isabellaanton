@@ -1,3 +1,4 @@
+import { useSite } from '../SiteContext'
 const CONTACT_LINKS = [
   {
     href: 'https://linkedin.com/in/isabella-anton',
@@ -26,30 +27,29 @@ const CONTACT_LINKS = [
   {
     href: 'mailto:isabellaanton3@gmail.com',
     iconClass: 'icon-email',
-    name: 'E-mail',
+    name: 'Email',
     handle: 'isabellaanton3@gmail.com',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EC4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-        <polyline points="22,6 12,13 2,6" />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3A248" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <polyline points="3 7 12 13 21 7" />
       </svg>
     ),
   },
 ]
 
 export default function Contact() {
+  const { t } = useSite()
   return (
     <section id="contato" className="section-pad">
       <div className="container">
         <div className="reveal">
-          <h2 className="section-title">Vamos <span>conversar</span></h2>
+          <h2 className="section-title">{t.contactTitle}</h2>
         </div>
 
         <div className="contact-inner reveal">
           <p className="contact-lead">
-            Estou ativamente buscando oportunidades de estágio ou emprego em TI. Se você
-            tem uma vaga, um projeto interessante ou só quer trocar uma ideia sobre
-            tecnologia — minha caixa de entrada está sempre aberta.
+            {t.contactLead}
           </p>
 
           <div className="contact-links">
@@ -63,7 +63,7 @@ export default function Contact() {
               >
                 <div className={`contact-link-icon ${link.iconClass}`}>{link.icon}</div>
                 <div className="contact-link-info">
-                  <p className="contact-link-name">{link.name}</p>
+                  <p className="contact-link-name">{t.socials[CONTACT_LINKS.indexOf(link)]}</p>
                   <p className="contact-link-handle">{link.handle}</p>
                 </div>
               </a>
